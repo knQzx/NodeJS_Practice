@@ -44,3 +44,8 @@ const Blog = mongoose.model('Blog',  blogSchema);
 //   .catch((err) => {
 //     console.log(`Your error is: ${err}`);
 //   })
+
+// Delete
+// const id = req.params.id;
+//
+// Blog.findByIdAndDelete(id)

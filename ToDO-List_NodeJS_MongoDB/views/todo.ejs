@@ -1,0 +1,59 @@
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ToDo List</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
+</head>
+
+<body>
+
+  <div class="todoList">
+    <div class="cover-img">
+      <div class="cover-inner">
+        <h3 id="dayName">ToDoList</h3>
+      </div>
+    </div>
+
+    <div class="content">
+      <form class="add" action="/blogs" method="POST">
+        <input type="text" name="title" placeholder="Add task..." required>
+        <div class="input-buttons">
+          <a href="#0" class="add-todo">
+            <button><i class="fas fa-plus add plus-icon"></i></button>
+          </a>
+        </div>
+      </form>
+      <ul class="todos align">
+          <% if (blogs.length > 0) { %>
+            <% blogs.forEach(blog => { %>
+              <form class="delete" action="/delete_blog" method="POST">
+                </li>
+                  <input type="checkbox" name="<%= blog._id %>" id="todo_<%= blogs.indexOf(blog) + 1 %>">
+                  <label for="todo_<%= blogs.indexOf(blog) + 1 %>">
+                    <span class="check"></span>
+                    <%= blog.title %>
+                  </label>
+                  <button type="submit"><i class="far fa-trash-alt delete"></i></button>
+                <li>
+              </form>
+            <% }) %>
+          <% } %>
+
+
+      </ul>
+    </div>
+  </div>
+
+</body>
+
+<script src="main.js"></script>
+
+</html>

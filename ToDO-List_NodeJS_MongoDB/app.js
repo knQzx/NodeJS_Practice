@@ -6,11 +6,11 @@ const Blog = require('./models/blog');
 const app = express();
 
 // url our mongoDB
-const dbURI = 'mongodb+srv://knqzx:qwerty123@node-tuts.dwffi.mongodb.net/node-tuts?retryWrites=true&w=majority';
+const dbURI = 'URL MONGODB';
 
 // connect to mongoDB
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(result => app.listen(3000))
+  .then(result => app.listen(8081))
   .catch(err => console.log(err));
 
 app.set('view engine', 'ejs');

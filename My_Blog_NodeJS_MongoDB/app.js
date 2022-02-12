@@ -10,7 +10,7 @@ const app = express();
 const dbURI = 'URL MONGODB';
 
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(result => app.listen(80))
+  .then(result => app.listen(8081))
   .catch(err => console.log(err));
 
 // register view engine
